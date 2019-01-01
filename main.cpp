@@ -9,12 +9,17 @@ int main (void) {
     char command = '\0';
 
     while (iter != -1) {
-        std::cout << "Please enter 'q' if you want quit." << std::endl;
+        if (iter == 0) std::cout << "Started" << std::endl;
+        iter++;
+        std::cout << "Running";
+        std::cout << " -- Please enter 'q' if you want quit." << std::endl;
         std::cin >> command;
 
         if (command == 'q') {
             iter = -1;
+            std::cout << "Terminated" << std::endl;
         }
+        std::cin.clear();
     }
 
     return 0;
